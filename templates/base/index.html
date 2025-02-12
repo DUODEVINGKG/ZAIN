@@ -1,0 +1,427 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+{% include 'include/header.html' %}
+
+        <!-- banner-section -->
+        <section class="banner-section">
+            <div class="banner-carousel owl-theme owl-carousel owl-dots-none">
+                <div class="slide-item">
+                    <div class="image-layer" style="background-image:url({{title.photo.url}})"></div>
+                    <div class="auto-container">
+                        <div class="content-box">
+                            <h1>{{title.title}}</h1>
+                            <div class="btn-box">
+                                <a href="{% url 'contact' %}" class="theme-btn-one">{% trans "Связаться с нами" %}</a>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="slide-item">
+                    <div class="image-layer" style="background-image:url({{title.photo2.url}})"></div>
+                    <div class="auto-container">
+                        <div class="content-box">
+                            <h1>{{title.title}}</h1>
+                            <div class="btn-box">
+                                <a href="index.html" class="theme-btn-one">{% trans "Связаться с нами" %}</a>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner-section end -->
+
+
+        <!-- feature-section -->
+        <section class="feature-section bg-color-1 centred" id="feature">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
+                        <div class="feature-block-one">
+                            <div class="inner-box">
+                                <div class="icon-box"><i class="flaticon-mission"></i></div>
+                                <h2>{% trans "Заполнение" %}<br/>{% trans "анкеты и отбор" %}</h2>
+                                <figure class="image-box">
+                                    <img src="{% static 'assets/images/resource/feature-1.jpg' %}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
+                        <div class="feature-block-one">
+                            <div class="inner-box">
+                                <div class="icon-box"><i class="flaticon-creative-idea"></i></div>
+                                <h2>{% trans "Cобеседование" %}<br/>{% trans "с работодателем" %}</h2>
+                                <figure class="image-box">
+                                    <img src="{% static 'assets/images/resource/feature-2.jpg' %}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
+                        <div class="feature-block-one">
+                            <div class="inner-box">
+                                <div class="icon-box"><i class="flaticon-solution"></i></div>
+                                <h2>{% trans "Оформление" %}<br/>{% trans "и сбор документов" %}</h2>
+                                <figure class="image-box">
+                                    <img src="{% static 'assets/images/resource/feature-3.jpg' %}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- feature-section end -->
+
+
+        <div class="quote-box">
+            <div class="auto-container">
+                <div class="inner-box">
+                    <div class="icon-box">"</div>
+                    <p>{% trans "Мы помогаем найти работу за границей с достойной оплатой, карьерным ростом и комфортным жильем. Zain — ваш надежный партнер в построении успешного будущего." %}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- about-section -->
+        <section class="about-section" id="about">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                        <div class="image_block_1">
+                            <div class="image-box">
+                                <figure class="image image-1"><img src="{% static 'assets/images/resource/about-1.jpg' %}" alt=""></figure>
+                                <figure class="image image-2"><img src="{% static 'assets/images/resource/aboutusss.JPG' %}" alt=""></figure>
+                                <div class="image-content">
+                                    <div class="icon-box"><i class="flaticon-recruitment"></i></div>
+                                    <h5>{% trans "Найдите идеальную работу" %}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                        <div class="content_block_1">
+                            <div class="content-box">
+                                <div class="sec-title">
+                                    <p>{% trans "Добро пожаловать в Zain" %}</p>
+                                    <h2>{% trans "ZainKG – Ваш надежный проводник в мир легальной работы" %}</h2>
+                                </div>
+                                <div class="text">
+                                    <p>{% trans "Мы – лицензированное агентство с 10-летним опытом, помогающее талантливым специалистам построить успешную карьеру в ОАЭ, Катаре, Кувейте и Королевстве Саудовская Аравия" %}</p>
+                                </div>
+                                <div class="inner-box clearfix">
+                                    <div class="single-item">
+                                        <h5><span>01</span>{% trans "Поддержка Партнеров" %}</h5>
+                                        <p>{% trans "Сотрудничаем с лидерами для лучших вакансий." %}</p>
+                                    </div>
+                                    <div class="single-item">
+                                        <h5><span>02</span>{% trans "Надежность и Качество" %}</h5>
+                                        <p>{% trans "Гарантируем комфортные условия и достойную оплату за границей." %}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about-section end -->
+        
+        
+        <!-- agency-section -->
+        <section class="agency-section" style="background-image: url({% static 'assets/images/background/agency-1.jpg' %});">
+            <div class="auto-container">
+                <div class="row align-items-center clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                        <div class="content_block_2">
+                            <div class="content-box">
+                                <div class="sec-title light">
+                                    <p>{% trans "О нашей компании" %}</p>
+                                    <h2>{% trans "Мы надежное агентство по трудоустройству за границей" %}</h2>
+                                </div>
+                                <div class="btn-box"><a href="{% url 'contact' %}" class="theme-btn-one">{% trans "Связаться с нами" %}</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                        <div class="content_block_3">
+                            <div class="content-box">
+                                <div class="tabs-box">
+                                    <div class="tab-btn-box">
+                                        <ul class="tab-btns tab-buttons clearfix">
+                                            <li class="tab-btn active-btn" data-tab="#tab-1">{% trans "Для наших клиентов" %}</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tabs-content">
+                                        <div class="tab active-tab" id="tab-1">
+                                            <div class="inner-box">
+                                                <figure class="image-box"><img src="{% static 'assets/images/resource/agency-1.jpg' %}" alt=""></figure>
+                                                <div class="text">
+                                                    <p>{% trans "Компания Zain предлагает высокооплачиваемую работу, соответствующую вашим навыкам." %}</p>
+                                                    <ul class="list clearfix">
+                                                        <li>{% trans "Подбор вакансий под ваши навыки" %}</li>
+                                                        <li>{% trans "Полное сопровождение на всех этапах" %}</li>
+                                                        <li>{% trans "Индивидуальные консультации для успеха" %}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- agency-section end -->
+
+
+        <!-- funfact-section -->
+        <section class="funfact-section centred">
+            <div class="auto-container">
+                <div class="inner-container">
+                    <div class="row clearfix">
+                        <div class="col-lg-3 col-md-6 col-sm-12 counter-block">
+                            <div class="counter-block-one">
+                                <div class="inner-box">
+                                    <div class="icon-box"><i class="flaticon-scrum"></i></div>
+                                    <div class="count-outer count-box">
+                                        <span class="count-text" data-speed="1500" data-stop="{{counter.partners}}">0</span>
+                                    </div>
+                                    <p>{% trans "Наши партнеры" %}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 counter-block">
+                            <div class="counter-block-one">
+                                <div class="inner-box">
+                                    <div class="icon-box"><i class="flaticon-business-idea"></i></div>
+                                    <div class="count-outer count-box">
+                                        <span class="count-text" data-speed="1500" data-stop="{{counter.сurrent_employees}}">0</span>
+                                    </div>
+                                    <p>{% trans "Текущие работники" %}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 counter-block">
+                            <div class="counter-block-one">
+                                <div class="inner-box">
+                                    <div class="icon-box"><i class="flaticon-recruit"></i></div>
+                                    <div class="count-outer count-box">
+                                        <span class="count-text" data-speed="1500" data-stop="{{counter.free_vacancies}}">0</span>
+                                    </div>
+                                    <p>{% trans "Свободные вакансии" %}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 counter-block">
+                            <div class="counter-block-one">
+                                <div class="inner-box">
+                                    <div class="icon-box"><i class="flaticon-customer-review"></i></div>
+                                    <div class="count-outer count-box">
+                                        <span class="count-text" data-speed="1500" data-stop="{{counter.happy_clients}}">0</span>
+                                    </div>
+                                    <p>{% trans "Счастливые клиенты" %}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- funfact-section end -->
+        
+        
+        <!-- project-section -->
+        <section class="project-section" id="project">
+            <div class="auto-container">
+                <div class="sec-title">
+                    <h2>{% trans "Свободные вакансии" %}</h2>
+                </div>
+            </div>
+            <div class="outer-container">
+                <div class="gallery-carousel owl-carousel owl-theme owl-dots-none nav-style-one">
+                    {% for vacancy in vacancy %}
+                    <div class="project-block-one">
+                        <div class="inner-box">
+                            <figure class="image-box"><img src="{{vacancy.photo.url}}" alt=""></figure>
+                            <div class="link">
+                                <a href="{{vacancy.photo.url}}" class="lightbox-image" data-fancybox="gallery"><i class="flaticon-plus"></i></a>
+                            </div>
+                            <div class="text">
+                                <h3><a href="{% url 'project_details' vacancy.id %}">{{vacancy.title}}</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- project-section end -->
+
+
+        <!-- working-process -->
+        <section class="working-process centred">
+            <div class="auto-container">
+                <div class="sec-title centred">
+                    <h2>{% trans "Почему именно мы?" %}</h2>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-6 col-sm-12 process-block">
+                        <div class="process-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="icon-box">
+                                    <i class="flaticon-investment"></i>
+                                    <span>01</span>
+                                    <div class="icon-shape" style="background-image: url({% static 'assets/images/shape/shape-4.png' %});"></div>
+                                </div>
+                                <h3>{% trans "Полное сопровождение" %}</h3>
+                                <p>{% trans "Мы сопровождаем вас на каждом этапе: от подачи заявки до начала работы. Оказываем помощь в оформлении документов, консультируем по всем вопросам и обеспечиваем комфортное трудоустройство без лишних сложностей." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 process-block">
+                        <div class="process-block-one wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="icon-box">
+                                    <i class="flaticon-checklist"></i>
+                                    <span>02</span>
+                                    <div class="icon-shape" style="background-image: url({% static 'assets/images/shape/shape-4.png' %});"></div>
+                                </div>
+                                <h3>{% trans "Более 1000 успешных историй" %}</h3>
+                                <p>{% trans "За годы работы мы помогли более 1000 клиентам реализовать свои цели и успешно завершить свои проекты. Наши клиенты доверяют нам, и мы гордимся тем, что можем делиться их успехами." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 process-block">
+                        <div class="process-block-one wow fadeInUp animated animated" data-wow-delay="500ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="icon-box">
+                                    <i class="flaticon-outsourcing"></i>
+                                    <span>03</span>
+                                    <div class="icon-shape" style="background-image: url({% static 'assets/images/shape/shape-4.png' %});"></div>
+                                </div>
+                                <h3>{% trans "Официальное трудоустройство" %}</h3>
+                                <p>{% trans "Мы предлагаем официальное трудоустройство, которое гарантирует все положенные по закону социальные и пенсионные выплаты. Это дает вам уверенность в вашем будущем и соблюдение всех трудовых норм." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- working-process end -->
+        
+        
+        <!-- cta-section -->
+        <section class="cta-section bg-color-2">
+            <div class="auto-container">
+                <div class="inner-box clearfix">
+                    <div class="text pull-left">
+                        <h2>{% trans "Скачай пустой шаблон для резюме" %}</h2>
+                    </div>
+                    <div class="btn-box pull-right">
+                        <a href="{{file.file.url}}" class="theme-btn-one" download>{% trans "Скачать файл" %}</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- cta-section end -->
+        
+        
+        <!-- progress-section -->
+        <section class="progress-section" style="background-image: url({% static 'assets/images/background/progress-1.jpg' %});">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-5 col-md-12 col-sm-12 title-column">
+                        <div class="sec-title light">
+                            <h2>{% trans "Обратная связь" %}<br/>{% trans "от клиентов" %}</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-12 col-sm-12 content-column">
+                        <div class="content_block_4">
+                            <div class="content-box">
+                                <div class="counter-inner">
+                                    <div class="inner-box">
+                                        <div class="icon-box"><i class="flaticon-customer-review"></i></div>
+                                        <div class="count-outer count-box">
+                                            <span class="count-text" data-speed="1500" data-stop="{{counter.happy_clients}}">0</span>
+                                        </div>
+                                        <p>{% trans "Счастливые клиенты" %}</p>
+                                    </div>
+                                </div>
+                                <div class="progress-inner">
+                                    <div class="text">
+                                        <p>{% trans "Твой билет к лучшей жизни. Открой для себя захватывающие рабочие возможности за рубежом с высокими зарплатами, жильем и карьерным ростом." %}</p>
+                                    </div>
+                                    <div class="progress-content">
+                                        <div class="progress-box">
+                                            <h5>{% trans "Подбор персонала" %}</h5>
+                                            <div class="bar">
+                                                <div class="bar-inner count-bar" data-percent="80%"><div class="count-text">80%</div></div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-box">
+                                            <h5>{% trans "Трудоустройство" %}</h5>
+                                            <div class="bar">
+                                                <div class="bar-inner count-bar" data-percent="90%"><div class="count-text">90%</div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- progress-section end -->
+
+
+        <!-- testimonial-section -->
+        <section class="testimonial-section centred">
+            <div class="auto-container">
+                <div class="inner-container">
+                    <div class="three-item-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
+                        {% for review in reviews %}
+                        <div class="testimonial-block-one">
+                            <div class="inner-box">
+                                <div class="icon-box">"</div>
+                                <p>{{ review.description }}</p>
+                                <h5>{{ review.name }}</h5>
+                                <figure class="image-box">
+                                    <img src="{{ review.photo.url }}" alt="{{ review.name }}" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
+                                </figure>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- testimonial-section end -->
+
+
+        
+        <!-- main-footer -->
+        {% include "include/footer.html" %}
+        <!-- main-footer end -->
+
+
+
+        <!--Scroll to top-->
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <span class="fa fa-arrow-up"></span>
+        </button>
+    </div>
+
+
+    
+</html>
+
+{% endblock %}

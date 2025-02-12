@@ -1,0 +1,137 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+{% include 'include/header.html' %}
+
+
+        <!-- Page Title -->
+        <section class="page-title centred" style="background-image: url({% static 'assets/images/background/page-title.jpg' %});">
+            <div class="auto-container">
+                <div class="content-box">
+                    <div class="title">
+                        <h1>{% trans "Наши контакты" %}</h1>
+                    </div>
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'index' %}">{% trans "Главная" %}</a></li>
+                        <li>{% trans "Контакты" %}</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Page Title -->
+        
+        
+        <!-- contact-info-section -->
+        <section class="contact-info-section">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-6 col-sm-12 info-column">
+                        <div class="single-info-box">
+                            <div class="inner-box">
+                                <div class="icon-box"><i class="flaticon-email"></i></div>
+                                <p>
+                                    <a href="">{% trans "Электронная почта" %}</a><br />
+                                    <a href="">{{base.email}}</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 info-column">
+                        <div class="single-info-box">
+                            <div class="inner-box">
+                                <div class="icon-box"><i class="flaticon-telephone"></i></div>
+                                <p>
+                                    <a href="">{% trans "Номер телефона" %}</a><br />
+                                    <a href="">{{base.phone}}</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 info-column">
+                        <div class="single-info-box">
+                            <div class="inner-box">
+                                <div class="icon-box"><i class="flaticon-pin"></i></div>
+                                <p>{% trans "Адресс" %}<br />{{base.address}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact-info-section end -->
+        
+        
+        <!-- contact-section -->
+        <section class="contact-section sec-pad">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-12 col-sm-12 title-column">
+                        <div class="title-inner">
+                            <div class="sec-title">
+                                <p>{% trans "Свяжитесь с нами" %}</p>
+                                <h2>{% trans "Свяжитесь с нами прямо сейчас!" %}</h2>
+                            </div>
+                            <div class="text">
+                                <p>{% trans "Твой билет к лучшей жизни. Открой для себя захватывающие рабочие возможности за рубежом." %}</p>
+                            </div>
+                            <ul class="social-links clearfix">
+                                <li><h6>{% trans "Соц сети:" %}</h6></li>
+                                <li><a href="{{base.whatsapp}}"><i class="fab fa-whatsapp"></i></a></li>
+                                <li><a href="{{base.instagram}}"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="{{base.telegram}}"><i class="fab fa-telegram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-12 col-sm-12 form-column">
+                        <div class="form-inner">
+                            <form method="POST" action="{% url 'contact' %}" id="contact-form" class="default-form">
+                                {% csrf_token %}
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        <input type="text" name="name" id="name" placeholder="{% trans 'ФИО' %}" required>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        <input type="email" name="email" id="email" placeholder="{% trans 'Электронная почта' %}" required>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 form-group">
+                                        <input type="text" name="phone" id="phone" placeholder="{% trans 'Номер телефона' %}" required>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-12 form-group">
+                                        <input type="text" name="subject" id="subject" placeholder="{% trans 'Заголовок' %}" required>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <textarea name="message" id="message" placeholder="{% trans 'Напиши подробнее' %}"></textarea>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
+                                        <button class="theme-btn-one" type="submit" name="submit-form">{% trans "Отправить" %}</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact-section end -->
+
+
+        <!-- google-map-section -->
+        <!-- google-map-section end --> 
+
+
+        <!-- main-footer -->
+        {% include "include/footer.html" %}
+        <!-- main-footer end -->
+
+
+
+        <!--Scroll to top-->
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <span class="fa fa-arrow-up"></span>
+        </button>
+    </div>
+
+
+    {% endblock %}

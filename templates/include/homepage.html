@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<title>ZAIN RECRUTING</title>
+
+<!-- Fav Icon -->
+<link rel="icon" style="border-radius: 70px;" href="{% static 'assets/images/zein_logo.jpg' %}" type="image/x-icon">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<!-- Stylesheets -->
+<link href="{% static 'assets/css/font-awesome-all.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/flaticon.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/owl.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/jquery.fancybox.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/color.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/responsive.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="boxed_wrapper">
+
+
+        <!-- preloader -->
+        <div class="preloader"></div>
+        <!-- preloader -->
+        {% block content %}
+        {% endblock %}
+
+    <!-- jequery plugins -->
+<script src="{% static 'assets/js/jquery.js' %}"></script>
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/owl.js' %}"></script>
+<script src="{% static 'assets/js/wow.js' %}"></script>
+<script src="{% static 'assets/js/validation.js' %}"></script>
+<script src="{% static 'assets/js/jquery.fancybox.js' %}"></script>
+<script src="{% static 'assets/js/appear.js' %}"></script>
+<script src="{% static 'assets/js/scrollbar.js' %}"></script>
+<script src="{% static 'assets/js/pagenav.js' %}"></script>
+
+<!-- main-js -->
+<script src="{% static 'assets/js/script.js' %}"></script>
+
+</body><!-- End of .page_wrapper -->

@@ -1,0 +1,86 @@
+
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+
+{% include 'include/header.html' %}
+
+
+        <!-- Page Title -->
+        <section class="page-title centred" style="background-image: url({% static 'assets/images/background/page-title.jpg' %});">
+            <div class="auto-container">
+                <div class="content-box">
+                    <div class="title">
+                        <h1>{% trans "Вакансии" %}</h1>
+                    </div>
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'index' %}">{% trans "Главная" %}</a></li>
+                        <li>{% trans "Вакансии" %}</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Page Title -->
+        
+        
+        <!-- project-details -->
+        <section class="project-details">
+            <div class="auto-container">
+                <div class="project-details-content">
+                    <figure class="image-box"><img src="{{vacancy.photo.url}}" alt=""></figure>
+                    <div class="info-box">
+                        <div class="row clearfix">
+                            <div class="col-lg-3 col-md-6 col-sm-12 info-column">
+                                <div class="single-info-box">
+                                    <h5>{% trans "Категория" %}</h5>
+                                    <p>{{vacancy.title}}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 info-column">
+                                <div class="single-info-box">
+                                    <h5>{% trans "Дата" %}</h5>
+                                    <p>{{vacancy.created}}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 info-column">
+                                <div class="single-info-box">
+                                    <h5>{% trans "Страна" %}</h5>
+                                    <p>{{vacancy.country}}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 info-column">
+                                <div class="single-info-box">
+                                    <h5>{% trans "Зарплата" %}</h5>
+                                    <p>{{vacancy.salary}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h2>{{vacancy.title}}</h2>
+                        <p>{{vacancy.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- project-details end -->
+
+
+        
+
+
+        <!-- main-footer -->
+        {% include "include/footer.html" %}
+        <!-- main-footer end -->
+
+
+
+        <!--Scroll to top-->
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <span class="fa fa-arrow-up"></span>
+        </button>
+    </div>
+
+    {% endblock %}

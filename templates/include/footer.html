@@ -1,0 +1,91 @@
+{% load static %}
+{% load i18n %}
+<footer class="main-footer">
+    <div class="footer-top" style="background-image: url({% static 'assets/images/background/footer-1.jpg' %});">
+        <div class="auto-container">
+            <div class="footer-info clearfix">
+                <div class="single-item">
+                    <div class="inner">
+                        <div class="icon-box"><i class="flaticon-mail"></i></div>
+                        <h6>{% trans "Электронная почта" %}</h6>
+                        <p><a href="mailto:needhelp@example.com">{{base.email}}</a></p>
+                    </div>
+                </div>
+                <div class="single-item">
+                    <div class="inner">
+                        <div class="icon-box"><i class="flaticon-phone"></i></div>
+                        <h6>{% trans "Номер телефона" %}</h6>
+                        <p><a href="tel:928886660000">{{base.phone}}</a></p>
+                    </div>
+                </div>
+                <div class="single-item">
+                    <div class="inner">
+                        <div class="icon-box"><i class="flaticon-address"></i></div>
+                        <h6>{% trans "Адресс" %}</h6>
+                        <p>{{base.address}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-section">
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget logo-widget">
+                            <figure class="footer-logo"><a href="{% url 'index' %}"><img style="border-radius: 70px;" src="{% static 'assets/images/logo.jpg' %}" alt=""></a></figure>
+                            <p>{% trans "Свяжитесь с нами, чтобы узнать подробнее" %}</p>
+                            <form action="{% url 'index' %}" method="post">
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="{% trans 'Электронная почта' %}" required>
+                                    <button><i href='{% url "contact" %}' class="fas fa-check"></i></button>
+                                </div>
+                            </form>
+                            <ul class="social-links clearfix">
+                                <li><h6>{% trans "Социальные сети:" %}</h6></li>
+                                <li><a href="{{base.whatsapp}}"><i class="fab fa-whatsapp"></i></a></li>
+                                <li><a href="{{base.instagram}}"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="{{base.telegram}}"><i class="fab fa-telegram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget links-widget">
+                            <div class="widget-title">
+                                <h4></h4>
+                            </div>
+                            <div class="widget-content">
+                                <ul class="links-list clearfix">
+                                    <li><a href="#project">{% trans "Вакансии" %}</a></li>
+                                    <li><a href="{% url 'contact' %}">{% trans "Связаться с нами" %}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget links-widget ml-30">
+                            <div class="widget-title">
+                                <h4>{% trans "Ссылки" %}</h4>
+                            </div>
+                            <div class="widget-content">
+                                <ul class="links-list clearfix">
+                                    <li><a href="#about">{% trans "О нас" %}</a></li>
+                                    <li><a href="#feature">{% trans "Особенность" %}</a></li>
+                                    <li><a href="#project">{% trans "Вакансии" %}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="auto-container">
+            <div class="inner-box clearfix">
+                <div class="copyright pull-left">
+                    <p>&copy; {% trans "Авторские права 2024 ZAIN.KG. Все права защищены" %} <a href="index.html"></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
