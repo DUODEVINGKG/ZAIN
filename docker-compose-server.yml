@@ -5,13 +5,15 @@ services:
     build: .
     command: >
       sh -c "python manage.py collectstatic --noinput &&
-             gunicorn core.wsgi:application --bind 0.0.0.0:8000"
+             gunicorn core.wsgi:application --bind 0.0.0.0:8002"
     volumes:
       - .:/app
       - static_volume:/app/static
       - media_volume:/app/media
     expose:
-      - "8000"
+      - "8002"
+    ports:
+      - "8002:8002"  
     depends_on:
       - db
 
@@ -23,7 +25,6 @@ services:
       POSTGRES_PASSWORD: 12345
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-
 
   bot:
     build: .
